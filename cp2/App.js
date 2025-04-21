@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Header from './src/components/Header/Header';
+import Rodape from './src/components/Rodape/Rodape';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <Text style={styles.titulo}>CP2 MOBILE</Text>
         </ScrollView>
+        <Rodape/>
       </View>
     </>
   );
