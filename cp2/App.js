@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import Header from './src/components/Header/Header';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <View style={styles.container}>
+        <Header/>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          <Text style={styles.titulo}>CP2 MOBILE</Text>
+        </ScrollView>
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex:1,
+    backgroundColor:'#F1FAEE'
   },
+  titulo:{
+    fontWeight:'bold'
+  }, 
+  scrollContent:{
+    padding:90,
+  }
 });
