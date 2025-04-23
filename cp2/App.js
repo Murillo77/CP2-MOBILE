@@ -37,7 +37,7 @@ function Home() {
         </View>
 
         <View style={styles.box}>
-          <Text style={styles.boxTitle}>Rastreador de Humor</Text>
+          <Text style={styles.boxTitle}>Registro de Humor</Text>
           <Text style={styles.boxText}>
             Registre como está se sentindo usando 5 emojis, de muito feliz a muito triste. Acompanhe a evolução do seu humor com o tempo e entenda melhor suas emoções.
           </Text>
