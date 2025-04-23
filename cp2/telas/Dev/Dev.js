@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, Linking, TouchableOpacity } from 'react-native';
 import Rodape from '../../src/components/Rodape/Rodape';
 import Header from '../../src/components/Header/Header';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Dev() {
   return (
@@ -9,29 +10,46 @@ export default function Dev() {
       <ScrollView contentContainerStyle={styles.boxesContainer}>
         {/* Box do Murillo */}
         <View style={styles.box}>
-          <Image source={require('../../assets/nike.png')} style={styles.photo} />
+          <Image source={require('../../assets/murillo.jpg')} style={styles.photo} />
           <Text style={styles.nome}>Murillo Sant'Anna</Text>
           <Text style={styles.rm}>RM: 557183</Text>
-          <Text style={styles.description}>Eu fiz a parte do design e implementação do código.</Text>
+          <TouchableOpacity
+            style={styles.githubButton}
+            onPress={() => Linking.openURL('https://github.com/Murillo77')}
+          >
+            <Icon name="github" size={18} color="#fff" style={{ marginRight: 8 }} />
+            <Text style={styles.githubText}>Ver GitHub</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Box do Samuel */}
         <View style={styles.box}>
-          <Image source={require('../../assets/nike.png')} style={styles.photo} />
+          <Image source={require('../../assets/samuel.png')} style={styles.photo} />
           <Text style={styles.nome}>Samuel Damasceno</Text>
-          <Text style={styles.rm}>RM: 123456</Text>
-          <Text style={styles.description}>Samuel fez a integração com a API.</Text>
+          <Text style={styles.rm}>RM: 558876</Text>
+          <TouchableOpacity
+            style={styles.githubButton}
+            onPress={() => Linking.openURL('https://github.com/samueldamasceno')}
+          >
+            <Icon name="github" size={18} color="#fff" style={{ marginRight: 8 }} />
+            <Text style={styles.githubText}>Ver GitHub</Text>
+          </TouchableOpacity>
         </View>
 
         {/* Box do Felipe */}
         <View style={styles.box}>
           <Image source={require('../../assets/felipe.png')} style={styles.photo} />
           <Text style={styles.nome}>Felipe Prometti</Text>
-          <Text style={styles.rm}>RM: 654321</Text>
-          <Text style={styles.description}>Felipe fez a tela de suporte.</Text>
+          <Text style={styles.rm}>RM: 555174</Text>
+          <TouchableOpacity
+            style={styles.githubButton}
+            onPress={() => Linking.openURL('https://github.com/felipeprometti')}
+          >
+            <Icon name="github" size={18} color="#fff" style={{ marginRight: 8 }} />
+            <Text style={styles.githubText}>Ver GitHub</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-
       <Rodape />
     </View>
   );
@@ -50,7 +68,7 @@ const styles = StyleSheet.create({
   },
   box: {
     width: '100%',
-    height: 300,
+    height: 350,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff',
@@ -67,6 +85,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     marginBottom: 10,
+    borderRadius: 30,
   },
   nome: {
     fontSize: 16,
@@ -75,10 +94,19 @@ const styles = StyleSheet.create({
   rm: {
     fontSize: 12,
     color: '#555',
+    marginBottom: 10,
   },
-  description: {
-    fontSize: 12,
-    textAlign: 'center',
-    marginTop: 5,
+  githubButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#24292e',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+  },
+  githubText: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
