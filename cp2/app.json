@@ -4,11 +4,11 @@
     "slug": "cp2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/nike.png",
+    "icon": "./assets/MindSafe-removebg-preview.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/nike.png",
+      "image": "./assets/MindSafe.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,12 +17,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/nike.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/MindSafe.jpg",
+        "backgroundColor": "transparent"
       }
     },
     "web": {
-      "favicon": "./assets/nike.png"
+      "favicon": "./assets/MindSafe.jpg"
     }
   }
 }
