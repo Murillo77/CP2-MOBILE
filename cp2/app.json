@@ -4,11 +4,11 @@
     "slug": "cp2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/MindSafe-removebg-preview.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/MindSafe.jpg",
+      "image": "./assets/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,12 +17,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/MindSafe.jpg",
-        "backgroundColor": "transparent"
-      }
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.feprometti.cp2"
     },
     "web": {
-      "favicon": "./assets/MindSafe.jpg"
+      "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "40a6fed9-5c57-4790-b98d-082e9dda60e4"
+      }
     }
   }
 }
